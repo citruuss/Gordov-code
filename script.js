@@ -90,10 +90,11 @@ const metricObserver = new IntersectionObserver(entries => {
         const w      = parseFloat(fill.dataset.width || '0');
 
         if (step1 !== undefined) {
-          // +30–70%: appear at 30% instantly, then animate to 70%
+          // +30–70%: fill to 30% instantly, then animate to 70%
           const s1 = parseFloat(step1);
           const s2 = parseFloat(fill.dataset.step2 || s1);
           fill.style.transition = 'none';
+          fill.style.marginLeft = '0';
           fill.style.width = s1 + '%';
           requestAnimationFrame(() => requestAnimationFrame(() => {
             fill.style.transition = 'width 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s';
