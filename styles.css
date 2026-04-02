@@ -838,9 +838,9 @@ section {
               margin-left 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
 
-/* Thin bar (+30–70%) */
+/* Range bar (+30–70%) */
 .metric__fill--thin {
-  height: 2px;
+  height: 100%;
 }
 
 
@@ -1630,7 +1630,12 @@ section {
   .stat-item { padding: 16px 20px; }
 
   .why__grid { flex-direction: column; align-items: stretch; gap: 0; }
-  .why__arrow { transform: rotate(90deg); padding: 8px 0; text-align: center; }
+  .why__arrow { transform: none; padding: 8px 0; text-align: center; font-size: 1.5rem; }
+  .why__arrow { font-size: 0; }
+  .why__arrow::after { content: '↓'; font-size: 1.5rem; }
+
+  .process__steps .process__step { margin-left: 0 !important; width: 100%; }
+  .process__step { gap: 16px; }
 
   .integrations__grid .integration-item:nth-child(1),
   .integrations__grid .integration-item:nth-child(2) { flex: 1 1 calc(50% - 6px); }
