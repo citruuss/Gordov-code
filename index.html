@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Max-бот — автоматизированная система продаж в мессенджере MAX. Заменяет отдел продаж, принимает оплату, квалифицирует лидов 24/7.">
+  <title>GORDO CODE — Max-бот, система продаж в мессенджере</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.PNG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#" class="header__logo">
+          <img src="logo.svg" alt="GORDON CODE" class="header__logo-img">
+        </a>
+        <nav class="header__nav">
+          <a href="#solution" class="nav-link">Решение</a>
+          <a href="#features" class="nav-link">Возможности</a>
+          <a href="#process" class="nav-link">Процесс</a>
+          <a href="#form" class="nav-link">Контакт</a>
+        </nav>
+        <a href="#form" class="btn btn--outline header__cta">Оставить заявку</a>
+        <button class="burger" id="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#solution" class="mobile-link">Решение</a>
+      <a href="#features" class="mobile-link">Возможности</a>
+      <a href="#process" class="mobile-link">Процесс</a>
+      <a href="#form" class="mobile-link btn btn--white">Оставить заявку</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg">
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="hero__grid"></div>
+    </div>
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__badge reveal">
+          <span class="badge-dot"></span>
+          Запуск под ключ за 7–14 дней
+        </div>
+        <h1 class="hero__title reveal">
+          Max-бот,<br>который заменяет<br><span class="gradient-text">отдел продаж</span>
+        </h1>
+        <p class="hero__sub reveal">
+          Автоматизирует заявки, продаёт и принимает оплату в мессенджере MAX — без менеджеров и потерь
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#form" class="btn btn--primary btn--lg">Получить стратегию бота</a>
+          <a href="#solution" class="btn btn--ghost btn--lg">
+            <span class="play-icon">▶</span>
+            Посмотреть, как это работает
+          </a>
+        </div>
+        <div class="hero__stats reveal">
+          <div class="stat-item">
+            <span class="stat-num">+30-70%</span>
+            <span class="stat-label">к конверсии</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">24/7</span>
+            <span class="stat-label">без выходных</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">7–14 дней</span>
+            <span class="stat-label">запуск под ключ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <div class="section-label reveal">Проблема</div>
+      <h2 class="section-title reveal">Вы теряете клиентов<br><span class="gradient-text">каждый день</span></h2>
+      <div class="problem__grid">
+        <div class="problem__card reveal">
+          <div class="problem__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <p>Вы не отвечаете <strong>мгновенно</strong></p>
+        </div>
+        <div class="problem__card reveal">
+          <div class="problem__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <line x1="9" y1="9" x2="15" y2="9"/>
+              <line x1="9" y1="13" x2="13" y2="13"/>
+            </svg>
+          </div>
+          <p>Заявки теряются <br><strong>в переписках</strong></p>
+        </div>
+        <div class="problem__card reveal">
+          <div class="problem__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <p>Менеджеры работают <strong>нестабильно</strong></p>
+        </div>
+        <div class="problem__card reveal">
+          <div class="problem__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              <line x1="12" y1="10" x2="12" y2="14"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <p>Клиенты <br><strong>«остывают»</strong></p>
+        </div>
+      </div>
+      <div class="problem__accent reveal">
+        <div class="accent-line"></div>
+        <p><strong>Пока вы думаете — клиент покупает у того,<br>кто ответил быстрее!</strong></p>
+        <div class="accent-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="solution" id="solution">
+    <div class="container">
+      <div class="solution__inner">
+        <div class="solution__text">
+          <div class="section-label reveal">Решение</div>
+          <h2 class="section-title reveal">Мы строим систему, которая <br><span class="gradient-text">продаёт за вас</span></h2>
+          <p class="solution__desc reveal">
+            Max-бот — это не просто чат.<br>
+            Это <i>автоматизированная</i> воронка продаж внутри мессенджера.
+          </p>
+          <p class="solution__desc reveal">
+            Он ведёт клиента от первого сообщения до оплаты — без участия человека.
+          </p>
+          <a href="#form" class="btn btn--primary reveal">Получить стратегию</a>
+        </div>
+        <div class="solution__visual reveal">
+          <div class="funnel">
+            <div class="funnel__step funnel__step--1">
+              <span class="funnel__num">01</span>
+              <span class="funnel__label">Первое сообщение</span>
+              <div class="funnel__bar" style="width:100%"></div>
+            </div>
+            <div class="funnel__step funnel__step--2">
+              <span class="funnel__num">02</span>
+              <span class="funnel__label">Квалификация лида</span>
+              <div class="funnel__bar" style="width:82%"></div>
+            </div>
+            <div class="funnel__step funnel__step--3">
+              <span class="funnel__num">03</span>
+              <span class="funnel__label">Продажа по сценарию</span>
+              <div class="funnel__bar" style="width:65%"></div>
+            </div>
+            <div class="funnel__step funnel__step--4">
+              <span class="funnel__num">04</span>
+              <span class="funnel__label">Оплата</span>
+              <div class="funnel__bar" style="width:48%"></div>
+            </div>
+            <div class="funnel__step funnel__step--5">
+              <span class="funnel__num">05</span>
+              <span class="funnel__label">Допродажа</span>
+              <div class="funnel__bar" style="width:35%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-label reveal">Возможности</div>
+      <h2 class="section-title reveal">Что делает бот</h2>
+      <div class="features__bento">
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>Отвечает 24/7</h3>
+          <p>Никаких пауз и выходных. Клиент получает ответ в любое время суток.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h3>Квалифицирует лидов</h3>
+          <p>Автоматически отсеивает нецелевых клиентов и передает в работу только “горячие” заявки, готовые к сделке.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <h3>Продаёт по сценарию</h3>
+          <p>Бот чётко ведёт клиента по вашему сценарию, соблюдая логику воронки на каждом этапе общения.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+              <line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+          </div>
+          <h3>Принимает оплату</h3>
+          <p>Оплата в один клик без потери клиента. Никаких переходов на внешние сайты — платёж проходит прямо в диалоге.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <h3>Выдаёт продукт автоматически</h3>
+          <p>Выдача происходит автоматически и мгновенно, как только платёж прошёл.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <h3>Делает допродажи</h3>
+          <p>Без навязчивости — предлагает дополнительные продукты вовремя, увеличивая чек автоматически.</p>
+        </div>
+      </div>
+      <div class="features__tagline reveal">
+        Без пауз. Без ошибок. Без человеческого фактора.
+      </div>
+    </div>
+  </section>
+
+  <!-- MONEY -->
+  <section class="money" id="money">
+    <div class="money__bg">
+      <div class="money__glow"></div>
+    </div>
+    <div class="container">
+      <div class="section-label reveal">Результат</div>
+      <h2 class="section-title reveal">Это не бот<br> <span class="gradient-text">Это рост выручки</span></h2>
+      <div class="money__metrics">
+        <div class="metric reveal">
+          <div class="metric__num">+30–70%</div>
+          <div class="metric__label">к конверсии</div>
+          <div class="metric__bar">
+            <div class="metric__fill metric__fill--thin" data-step1="30" data-step2="70"></div>
+          </div>
+        </div>
+        <div class="metric reveal">
+          <div class="metric__num">×5</div>
+          <div class="metric__label">быстрее обработка заявок</div>
+          <div class="metric__bar">
+            <div class="metric__fill" data-width="100"></div>
+          </div>
+        </div>
+        <div class="metric reveal">
+          <div class="metric__num">−70%</div>
+          <div class="metric__label">нагрузки на менеджеров</div>
+          <div class="metric__bar">
+            <div class="metric__fill" data-width="100" data-shrink="30"></div>
+          </div>
+        </div>
+      </div>
+      <div class="money__note reveal">
+        В большинстве кейсов бот окупается с первых продаж
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEGRATIONS -->
+  <section class="integrations" id="integrations">
+    <div class="container">
+      <div class="integrations__inner">
+        <div class="integrations__text">
+          <div class="section-label reveal">Интеграции</div>
+          <h2 class="section-title reveal">Встраивается<br>в вашу систему</h2>
+          <p class="integrations__desc reveal">CRM, таблицы, платёжки —<br>всё работает как единая система</p>
+        </div>
+        <div class="integrations__grid reveal">
+          <div class="integration-item">
+            <div class="integration-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <span>amoCRM</span>
+          </div>
+          <div class="integration-item">
+            <div class="integration-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8"/>
+                <path d="M12 17v4"/>
+              </svg>
+            </div>
+            <span>Битрикс24</span>
+          </div>
+          <div class="integration-item">
+            <div class="integration-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18"/>
+                <path d="M3 15h18"/>
+                <path d="M9 3v18"/>
+              </svg>
+            </div>
+            <span>Google Таблицы</span>
+          </div>
+          <div class="integration-item">
+            <div class="integration-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+                <circle cx="7" cy="15" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </div>
+            <span>ЮKassa</span>
+          </div>
+          <div class="integration-item">
+            <div class="integration-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+                <line x1="5" y1="15" x2="9" y2="15"/>
+              </svg>
+            </div>
+            <span>CloudPayments</span>
+          </div>
+          <div class="integration-item">
+            <div class="integration-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <span>Robokassa</span>
+          </div>
+          <div class="integration-item">
+            <div class="integration-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <span>LiqPay</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT WORKS -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="section-label reveal">Почему это работает</div>
+      <h2 class="section-title reveal">Причина проста</h2>
+      <div class="why__grid">
+        <div class="why__card reveal">
+          <p>Люди покупают там,<br><strong>где удобно</strong></p>
+        </div>
+        <div class="why__arrow reveal">→</div>
+        <div class="why__card reveal">
+          <p>Решение принимается<br><strong>быстро</strong></p>
+        </div>
+        <div class="why__arrow reveal">→</div>
+        <div class="why__card reveal">
+          <p>Быстрый ответ —<br><strong>готовая продажа</strong></p>
+        </div>
+      </div>
+      <div class="why__conclusion reveal">
+        Бот закрывает этот разрыв
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO NEEDS IT -->
+  <section class="who" id="who">
+    <div class="container">
+      <div class="section-label reveal">Аудитория</div>
+      <h2 class="section-title reveal">Если у вас есть входящие заявки —<br><span class="gradient-text">вам нужен бот</span></h2>
+      <div class="who__grid">
+        <div class="who__item reveal">
+          <div class="who__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <span>Онлайн-школы</span>
+        </div>
+        <div class="who__item reveal">
+          <div class="who__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/>
+            </svg>
+          </div>
+          <span>Услуги</span>
+        </div>
+        <div class="who__item reveal">
+          <div class="who__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <span>Эксперты</span>
+        </div>
+        <div class="who__item reveal">
+          <div class="who__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+          </div>
+          <span>E-commerce</span>
+        </div>
+        <div class="who__item reveal">
+          <div class="who__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <span>Инфобизнес</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-label reveal">Процесс</div>
+      <h2 class="section-title reveal">Берём всё на себя</h2>
+      <div class="process__steps">
+        <div class="process__step reveal">
+          <div class="step__num">01</div>
+          <div class="step__content">
+            <h3>Анализируем воронку</h3>
+            <p>Разбираем текущий путь клиента и находим точки роста</p>
+          </div>
+          <div class="step__line"></div>
+        </div>
+        <div class="process__step reveal">
+          <div class="step__num">02</div>
+          <div class="step__content">
+            <h3>Проектируем сценарий</h3>
+            <p>Создаём архитектуру диалогов под ваш бизнес</p>
+          </div>
+          <div class="step__line"></div>
+        </div>
+        <div class="process__step reveal">
+          <div class="step__num">03</div>
+          <div class="step__content">
+            <h3>Разрабатываем</h3>
+            <p>Собираем бот и настраиваем логику</p>
+          </div>
+          <div class="step__line"></div>
+        </div>
+        <div class="process__step reveal">
+          <div class="step__num">04</div>
+          <div class="step__content">
+            <h3>Подключаем оплату и CRM</h3>
+            <p>Интегрируем платёжные системы и вашу CRM</p>
+          </div>
+          <div class="step__line"></div>
+        </div>
+        <div class="process__step reveal">
+          <div class="step__num">05</div>
+          <div class="step__content">
+            <h3>Запускаем</h3>
+            <p>Тестируем и передаём готовую систему</p>
+          </div>
+        </div>
+      </div>
+      <div class="process__result reveal">
+        Вы получаете готовую систему
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIATION -->
+  <section class="diff" id="diff">
+    <div class="container">
+      <div class="diff__inner">
+        <div class="diff__text">
+          <div class="section-label reveal">Подход</div>
+          <h2 class="section-title reveal">Мы не делаем ботов</h2>
+          <p class="diff__subtitle reveal"><span class="gradient-text">Мы проектируем <br>системы продаж</span></p>
+        </div>
+        <div class="diff__list">
+          <div class="diff__item reveal">
+            <div class="diff__check">✓</div>
+            <div>
+              <strong>Фокус на прибыли, а не функциях </strong>
+            </div>
+          </div>
+          <div class="diff__item reveal">
+            <div class="diff__check">✓</div>
+            <div>
+              <strong>Глубокая проработка сценариев </strong>
+            </div>
+          </div>
+          <div class="diff__item reveal">
+            <div class="diff__check">✓</div>
+            <div>
+              <strong>Интеграция под бизнес, а не шаблон</strong>
+            </div>
+          </div>
+          <div class="diff__item reveal">
+            <div class="diff__check">✓</div>
+            <div>
+              <strong>Минимум вашего времени</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER -->
+  <section class="offer" id="offer">
+    <div class="offer__bg">
+      <div class="offer__glow"></div>
+    </div>
+    <div class="container">
+      <div class="offer__inner reveal">
+        <div class="offer__badge">Бесплатно</div>
+        <h2 class="offer__title">Разберём ваш кейс и покажем,<br>сколько вы теряете</h2>
+        <p class="offer__text">Бесплатно спроектируем концепцию бота под ваш бизнес</p>
+        <a href="#form" class="btn btn--primary btn--xl">Получить стратегию →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="form">
+    <div class="container">
+      <div class="form-section__inner">
+        <div class="form-section__text">
+          <div class="section-label reveal">Заявка</div>
+          <h2 class="section-title reveal">Получить стратегию<br>внедрения</h2>
+          <p class="form-section__sub reveal">Ответим в течение 30 минут</p>
+          <div class="form-section__promise reveal">
+            <div class="promise-item">
+              <div class="promise-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+              </div>
+              Бесплатная консультация
+            </div>
+            <div class="promise-item">
+              <div class="promise-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+              Анализ вашей воронки
+            </div>
+            <div class="promise-item">
+              <div class="promise-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+              </div>
+              Концепция бота под ваш бизнес
+            </div>
+          </div>
+        </div>
+        <div class="form-section__form reveal">
+          <form class="form" id="mainForm" novalidate>
+            <div class="form__group">
+              <label class="form__label" for="name">Имя</label>
+              <input type="text" id="name" name="name" class="form__input" placeholder="Как вас зовут?" required>
+              <span class="form__error" id="nameError">Введите ваше имя</span>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="niche">Ниша</label>
+              <input type="text" id="niche" name="niche" class="form__input" placeholder="Ваша сфера бизнеса" required>
+              <span class="form__error" id="nicheError">Укажите нишу</span>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="contact">Контакт</label>
+              <input type="text" id="contact" name="contact" class="form__input" placeholder="Telegram, телефон или email" required>
+              <span class="form__error" id="contactError">Укажите контакт</span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full btn--xl">
+              <span class="btn-text">Получить систему продаж</span>
+              <span class="btn-loader hidden">⏳</span>
+            </button>
+            <p class="form__note">Нажимая кнопку, вы соглашаетесь с <span class="form__note-link">политикой конфиденциальности</span></p>
+          </form>
+          <div class="form__success hidden" id="formSuccess">
+            <div class="success-icon">✓</div>
+            <h3>Заявка принята!</h3>
+            <p>Свяжемся с вами в течение 30 минут</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="final">
+    <div class="container">
+      <div class="final-cta__inner reveal">
+        <h2 class="final-cta__title">
+          Или вы автоматизируете продажи —<br>
+          <span class="gradient-text">или продолжаете терять клиентов</span>
+        </h2>
+        <a href="#form" class="btn btn--primary btn--xl">Оставить заявку</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="#" class="footer__logo">
+          <img src="logo.svg" alt="GORDO CODE" class="footer__logo-img">
+        </a>
+        <p class="footer__text">Система продаж в мессенджере MAX</p>
+        <p class="footer__copy">© 2026 GordovCode. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
